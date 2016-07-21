@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <p>Hello world!</p>
+    {% for post in posts %}
+        {{post.title}}
+        <br/>
+        {{post.text}}
+        <br/>
+        {{post.user.username}}
+    {% endfor %}
+    {% load staticfiles %}
+    <img src='{% static "images/back.jpg" %}'>
+</body>
+</html>
